@@ -1,38 +1,346 @@
-.App {
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.custom-navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* .navbar-nav .nav-link.active {
+  background-color: #FABD18;
+}
+
+/* For larger screens */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #FABD18;
+} */
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+
+.home_container{
+  height: 340vh;
+  background-color: black;
+  width: 100%;
+  background-image: url("./assets//images/pngwing\ 1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+.news_letter{
+    
+     background-color: #f8f8f8;
+    margin: auto;
+    padding: 4rem 1rem 0 0rem;
+    width: 100%;
+}
+.news_letter .container{
+   width: 1240px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.news_letter .column-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* // justify-content: center; */
+    padding: 20px;
+}
+
+.news_letter .column-two p:first-of-type{
+    margin: 2rem 0;
+    font-size: 28px;
+    /* color: #3550AF; */
+}
+
+
+.partners{
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.partners h2 {
+    text-align: center;
+    font-size: 42px;
+}
+.partner_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.partner_icons img{
+    width: 160px;
+}
+
+.value{
+    font-family: OverpassRegular;
+    width: 100%;
+}
+.value .container{
+    margin: 4rem auto;
+    padding: 4rem 0;
+    width: 1240px;
+}
+
+.value h2{
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.value .container .content{
+    grid-gap: 20px;
+    align-items: center;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.value .card {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 1rem;
+    text-align: center;
+    height: 350px;
+}
+ .value .card .card_icon{
+    background-color: #FABD18;
+    width: 90px;
+    height: 80px;
+    align-items: center;
+}
+.registration{
+  width: 100%;
+  /* height: 100vh; */
+  position: relative;
+  top: -5%;
+}
+
+.registration::before{
+  content: '';
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url("./assets/images/IMG-20230120-WA0072\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  /* top: -100% !important; */
+  /* z-index: 3; */
+}
+
+.registration .reg_par{
+   position: relative;
+    text-align: center;
+    height: 240px;
+     /* width: 812px; */
+     /* right: 509px; */
+    border-radius: none;
+    top: 30px !important;
+    color: #fff;
+    font-size: 34px !important;
+    font-weight: 600;
+}
+
+.registration .reg_btn{
+  position: absolute;
   text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.registration .reg_btn button {
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  width: 120px;
+  color: #fff;
+  font-size: 24px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer{
+  /* top: 260px; */
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer .footer_card{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  margin: 2rem;
+}
+.row{
+  --bs-gutter-x: 0 !important;
+}
+.social_icon{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.testimonies{
+  background: linear-gradient(180deg, #C89300 55.73%, rgba(200, 147, 0, 0) 100%);
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 400px) {
+  .home_container{
+    height: 310vh;
+    background-size: contain;
   }
-  to {
-    transform: rotate(360deg);
+
+  .testimonies{
+    position: relative;
+    top: -260px;
+    padding: 10px;
   }
+  
+  .news_letter .column-two p{
+    font-size: 20px;
+  }
+
+  .news_letter .container {
+        grid-template-columns: 1fr;
+    }
+
+    .news_letter .container {
+        width: 100%;
+    }
+
+    .news_letter .container img {
+        padding: 0rem;
+        width: 90vw;
+    }
+
+    .news_letter .container .column-two {
+        padding: 0;
+    }
+
+    .news_letter .container .column-two p {
+      font-size: 20px;
+    }
+
+  
+
+  .partners h2{
+      font-size: 20px;
+  }
+  .partner_icons{
+      gap: 1rem;
+  }
+  .partner_icons img{
+      width: 50px;
+  }
+
+  .value .container {
+        width: 100%;
+    }
+
+    .value .container .content {
+        grid-template-columns: 1fr;
+    }
+
+    .value .card {
+      margin: 1rem;
+      height: 220px;
+    }
+    .registration{
+      top: -10%;
+    }
+    .registration::before{
+      background-size: contain;
+      top: -25%;
+    }
+
+    .registration .reg_par{
+      top: 40px !important;
+      font-size: 15px !important;
+    }
+    .registration .reg_btn{
+      top: 30%;
+    }
+
+    .registration .reg_btn button{
+      height: 35px;
+      font-size: 16px;
+      width: 90px;
+    }
+    .footer{
+      height: 630px;
+    }
+}
+
+
+@media screen and (min-height: 400px) and (max-width: 400px)and(max-height: 560px){
+  
+}
+
+@media screen  and (min-width: 600px) and (max-width: 920px) and (min-height: 1000px){
+  .image_container{
+    height: 427px;
+    background-size: cover;
+  }
+  .news_letter{
+    /* top: -5vh; */
+    top: 35vh;
+  }
+
+  
+
+  .partners h2{
+      font-size: 40px;
+  }
+  .partner_icons{
+      gap: 1rem;
+  }
+  .partner_icons img{
+      width: 120px;
+  }
+  .home_container{
+    background-size: calc(90vh);
+  }
+  .registration .reg_btn{
+    top: 70%;
+  }
+  .footer{
+    position: relative;
+    top: -1000px !important;
+  }
+}
+
+@media screen  and (min-width: 800px) and (max-width: 920px) and (min-height: 1000px){
+  .home_container{
+    height: 200vj;
+  }
+  
+  .partner_icons img{
+      width: 100px;
+  }
+  .footer{
+    height: 500px;
+    position: relative;
+    top: -1900px !important;
+  }
+
 }

@@ -6,8 +6,14 @@
   position: relative;
 }
 
+/* .navbar-nav .nav-link.active {
+  background-color: #FABD18;
+}
 
-
+/* For larger screens */
+/* .navbar-dark .navbar-nav .nav-link.active {
+  color: #FABD18;
+}  */
 
 img {
     overflow-clip-margin: content-box;
@@ -192,7 +198,7 @@ img {
   padding: 20px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .home_container{
     height: 310vh;
     background-size: contain;
@@ -262,11 +268,11 @@ img {
     }
 
     .registration .reg_par{
-      top: 40px !important;
+      top: 80px !important;
       font-size: 15px !important;
     }
     .registration .reg_btn{
-      top: 30%;
+      top: 50%;
     }
 
     .registration .reg_btn button{
